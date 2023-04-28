@@ -57,4 +57,5 @@ module.exports = {
 
         return interaction.reply({ content: `${member} has been muted for ${duration}. Reason: ${reason}`, ephemeral: true });
     },
+  //deleted : true,
 };
