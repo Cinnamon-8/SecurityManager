@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { Permissions } = require('discord.js');
+const { PermissionsBitField } = require('discord.js');
+const ms = require('ms');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -26,7 +27,7 @@ module.exports = {
             return interaction.reply({ content: 'User not found.', ephemeral: true });
         }
 
-        if (!interaction.member.permissions.has(Permissions.FLAGS.MUTE_MEMBERS)) {
+        if (!interaction.member.permissions.has(PermissionsBitField.Flags.MuteMembers)) {
             return interaction.reply({ content: 'You do not have permission to mute users.', ephemeral: true });
         }
 

@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { Permissions, MessageEmbed } = require('discord.js');
+const { PermissionsBitField , MessageEmbed } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -21,7 +21,7 @@ module.exports = {
         const reason = interaction.options.getString('reason');
         const duration = interaction.options.getString('duration');
 
-        if (!interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS)) {
+        if (!interaction.member.permissions.has(Permissions.Flags.BanMembers)) {
             return interaction.reply({ content: 'You do not have permission to use this command.', ephemeral: true });
         }
 
