@@ -1,13 +1,13 @@
-const { Client , GatewayIntentBits } = require ('discord.js');
+const { Client , IntentsBitField } = require ('discord.js');
 const { CommandHandler } = require('djs-commander');
 const path = require('path');
 
 const client = new Client({
     intents: [
-GatewayIntentBits.Guilds,    GatewayIntentBits.GuildMembers, 
-GatewayIntentBits.GuildMessages,
-GatewayIntentBits.GuildMessageReactions,
-GatewayIntentBits.MessageContent,
+IntentsBitField.Flags.Guilds,    IntentsBitField.Flags.GuildMembers, 
+IntentsBitField.Flags.GuildMessages,
+IntentsBitField.Flags.GuildMessageReactions,
+IntentsBitField.Flags.MessageContent,
     
     ],
 });
