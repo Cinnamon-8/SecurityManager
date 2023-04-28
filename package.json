@@ -1,0 +1,21 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^1.6.1",
+    "@types/node": "^18.0.6",
+    "discord.js": "^14.9.0",
+    "djs-commander": "^0.0.45",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.2.6",
+    "path": "^0.12.7"
+  }
+}
