@@ -26,7 +26,7 @@ module.exports = {
             return interaction.reply({ content: 'User not found.', ephemeral: true });
         }
 
-        if (!interaction.member.permissions.has(Permissions.FLAGS.MUTE_MEMBERS)) {
+        if (!interaction.member.permissions.has(Permissions.MUTE_MEMBERS)) {
             return interaction.reply({ content: 'You do not have permission to mute users.', ephemeral: true });
         }
 
